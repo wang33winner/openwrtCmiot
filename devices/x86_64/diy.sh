@@ -19,7 +19,6 @@ sed -i 's/DEFAULT_PACKAGES +=/DEFAULT_PACKAGES += kmod-usb-hid kmod-mmc kmod-sdh
 svn co https://github.com/openwrt/openwrt/trunk/package/kernel/mt76 package/feeds/kiddin9/mt76
 curl -sfL https://raw.githubusercontent.com/immortalwrt/immortalwrt/master/package/kernel/mt76/patches/0001-mt76-allow-VHT-rate-on-2.4GHz.patch -o package/feeds/kiddin9/mt76/patches/0001-mt76-allow-VHT-rate-on-2.4GHz.patch
 
-svn co https://github.com/openwrt/openwrt/trunk/package/network/services/hostapd  package/feeds/kiddin9/hostapd
 
 mv -f tmp/r81* feeds/kiddin9/
 sed -i 's,kmod-r8169,kmod-r8168,g' target/linux/x86/image/64.mk
